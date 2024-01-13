@@ -1,8 +1,9 @@
 package Zadatak8;
+    /*Napisati i test program koji pravi nekoliko gradova i nekoliko automobila i nekoliko osoba, i onda napravite neka putovanja u neke od tih gradova,
+	sa nekim od tih automobila i vodja puta,
+	i onda prijavite neke od osoba na neka od putovanja, i onda pozovite i metodu za racunanje koliko je vremena potrebno da se stigne pri odredjenoj brzini.*/
 
-import java.util.ArrayList;
-
-public class Test {
+public class TestProgram {
     public static void main(String[] args) {
 
         Grad bankok = new Grad("Bangkok",8249_000,"Thai");
@@ -26,9 +27,13 @@ public class Test {
 
         ljetovanje.odjavaOsobeSaPutovanja(zoran);
         System.out.println(ljetovanje);
+
         System.out.println("====================");
+
         ljetovanje.prijavaOsobeNaPutovanje(zoran);
         System.out.println(ljetovanje);
+
+
 
     }
 

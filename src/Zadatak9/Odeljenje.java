@@ -61,6 +61,55 @@ public class Odeljenje {
         dnevnik.remove(u);
     }
 
+    //Napisati metod ispisiUcenika(int i) koja brise ucenika na poziciji {i} u dnevniku.
+    public void ispisiUcenika(int i){
+        dnevnik.remove(i);
+    }
+
+    //Napisati metod pogledajOcene(Ucenik u) koja ispisuje sve ocene ucenika {u}.
+    public void pogledajOcene(Ucenik u){
+        System.out.println(u.getOcene());
+    }
+
+    //Napisati metod pogledajOcene(int i) koja ispisuje sve ocene ucenika na poziciji {i} u dnevniku.
+    public void pogledajOcene(int i){
+        for (int j = 0; j < dnevnik.size(); j++) {
+            if(i == j){
+                System.out.println(getDnevnik().get(j).getOcene());
+            }
+        }
+    }
+
+    //Napisati metod prosecnaOcena(Ucenik u) koja ispisuje prosecnu ocenu ucenika {u}.
+    public void prosecnaOcena(Ucenik u){
+        System.out.println(u.prosek());
+    }
+
+    //Napisati metod prosecnaOcena(int i) koja ispisuje prosecnu ocenu ucenika na poziciji {i} u dnevniku.
+    public void procecnaOcena(int i){
+        System.out.println(dnevnik.get(i).prosek());
+    }
+
+    //Napisati metod prosecnaOcenaOdeljenja() koja vraca prosecnu ocenu celog odeljenja (0, ako nema ucenika u odeljenju).
+    public double prosecnaOcenaOdeljenja(){
+        if (dnevnik == null || dnevnik.isEmpty()) {
+            return 0;
+        }
+        double zbirProseka = 0;
+        for (Ucenik ucenik : dnevnik) {
+            zbirProseka += ucenik.prosek();
+        }
+
+        return zbirProseka / dnevnik.size();
+    }
+
+    //Napisati metod opisnaOcena(Ucenik u) koja ispisuje:
+    public void opisnaOcena(Ucenik u){
+
+    }
+
+
+
 
 
 

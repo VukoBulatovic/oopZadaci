@@ -64,5 +64,14 @@ public class Ucenik {
         return sb.toString();
     }
 
+    //pomocna metoda za test
+    public void ubaciUcene(int a,int b,int c,int d,int e){
+        ocene.add(0,a);
+        ocene.add(1,b);
+        ocene.add(2,c);
+        ocene.add(3,d);
+        ocene.add(4,e);
+    }
+
 }
 

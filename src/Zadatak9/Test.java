@@ -5,21 +5,20 @@ import java.util.ArrayList;
 public class Test {
     public static void main(String[] args) {
 
-        ArrayList<Integer> listaOcena = new ArrayList<>();
-        listaOcena.add(4);
-        listaOcena.add(2);
-        listaOcena.add(3);
-        listaOcena.add(5);
-
+        ArrayList<Integer> listaOcenaRatko = new ArrayList<>();
+        listaOcenaRatko.add(5);
+        listaOcenaRatko.add(5);
+        listaOcenaRatko.add(4);
+        listaOcenaRatko.add(5);
         Ucenik marko = new Ucenik("Marko","Petrovic");
-        Ucenik vuko = new Ucenik("Vuko","Bulatovic", listaOcena);
-        Ucenik vaso = new Ucenik("Vaso","Markovic", listaOcena);
-        Ucenik milena = new Ucenik("Milena","Boskovic", listaOcena);
-        Ucenik ratko = new Ucenik("Ratko","Kuvic", listaOcena);
-        //System.out.println(marko);
-        //System.out.println(vuko);
+        Ucenik vuko = new Ucenik("Vuko","Bulatovic");
+        Ucenik vaso = new Ucenik("Vaso","Markovic");
+        Ucenik milena = new Ucenik("Milena","Boskovic");
+        Ucenik ratko = new Ucenik("Ratko","Kuvic", listaOcenaRatko);
 
-        //System.out.println(vuko.prosek());
+        vuko.ubaciUcene(3,4,5,3,2);
+        vaso.ubaciUcene(3,2,3,1,3);
+        milena.ubaciUcene(1,2,2,2,1);
 
         ArrayList<Ucenik> ucenici = new ArrayList<>();
         ucenici.add(marko);
@@ -27,10 +26,7 @@ public class Test {
         ucenici.add(vaso);
         ucenici.add(milena);
 
-
         Odeljenje VI2 = new Odeljenje("VII-2",ucenici);
-        //VI2.upisiUcenika(marko);
-        //VI2.upisiUcenika(vuko);
         System.out.println(VI2);
 
         VI2.upisiUcenika(ratko,2);
@@ -38,6 +34,23 @@ public class Test {
         VI2.ispisiUcenika(vaso);
         System.out.println(VI2);
 
+        VI2.ispisiUcenika(1);
+        System.out.println(VI2);
+
+        System.out.println("===========================");
+        VI2.pogledajOcene(milena);
+
+        System.out.println("===========================");
+        VI2.pogledajOcene(1);
+
+        VI2.prosecnaOcena(milena);
+        VI2.procecnaOcena(1);
+
+        //VI2.ispisiUcenika(marko);
+        //VI2.ispisiUcenika(ratko);
+        //VI2.ispisiUcenika(milena);
+
+        System.out.println(VI2.prosecnaOcenaOdeljenja());
 
 
 

@@ -6,8 +6,9 @@ public class Test {
     public static void main(String[] args) {
 
         ArrayList<Integer> listaOcenaRatko = new ArrayList<>();
-        listaOcenaRatko.add(5);
-        listaOcenaRatko.add(5);
+        listaOcenaRatko.add(1);
+        listaOcenaRatko.add(2);
+        listaOcenaRatko.add(4);
         listaOcenaRatko.add(4);
         listaOcenaRatko.add(5);
         Ucenik marko = new Ucenik("Marko","Petrovic");
@@ -46,12 +47,16 @@ public class Test {
         VI2.prosecnaOcena(milena);
         VI2.procecnaOcena(1);
 
-        //VI2.ispisiUcenika(marko);
+        VI2.ispisiUcenika(marko);
         //VI2.ispisiUcenika(ratko);
         //VI2.ispisiUcenika(milena);
 
         System.out.println(VI2.prosecnaOcenaOdeljenja());
+        VI2.opisnaOcena(ratko);
 
+        System.out.println(VI2.izlistajDnevnik());
+
+        System.out.println(VI2.velicinaOdeljenja());
 
 
 

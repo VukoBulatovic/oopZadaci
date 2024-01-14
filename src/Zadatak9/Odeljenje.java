@@ -105,16 +105,56 @@ public class Odeljenje {
 
     //Napisati metod opisnaOcena(Ucenik u) koja ispisuje:
     public void opisnaOcena(Ucenik u){
-
+        if (u.getOcene().contains(1)) {
+            System.out.println("Nedovoljan");
+        } else if(u.prosek() >= 4.5){
+            System.out.println("Odlican");
+        } else if (u.prosek() >= 3.5){
+            System.out.println("Vrlo dobar");
+        } else if (u.prosek() >= 2.5){
+            System.out.println("Dobar");
+        } else if (u.prosek() >= 1.5) {
+            System.out.println("Dovoljan");
+        }
     }
 
+    //Napisati metod izlistajDnevnik() koja vraca String oblika:
+    //	{ime} i {prezime} ima ocene:
+    //	{ocene}
+    //za sve ucenike.
+    public String izlistajDnevnik(){
+        StringBuilder s = new StringBuilder();
+        for (Ucenik u : dnevnik) {
+            s.append(u.getIme()).append(" ").append(u.getPrezime()).append(" : ").append("\n");
+            s.append(u.getOcene()).append("\n");
+        }
+        return s.toString();
+    }
 
+    //Napisati metod String velicinaOdeljenja() koja vraca odgovarajucu poruku:
+    //	- "Veliko odeljenje"; ako ima vise od 25 ucenika
+    //	- "Srednje odeljenje"; ako ima ucenika izmedju 15 i 25
+    //	- "Malo odeljenje"; ako ima ucenika manje od 15
+    public String velicinaOdeljenja(){
+        String s = "";
+        if(dnevnik.size() > 25){
+            s = "Veliko odeljenje";
+        } else if (dnevnik.size() >= 15) {
+            s = "Srednje odeljenje";
+        } else {
+            s = "Malo odeljenje";
+        }
+        return s;
+    }
 
-
-
-
-
-
+    //Napisati toString() metod:
+    //	{Oznaka} odeljenja ima djake:
+    //	{Ime1} {Prezime1}
+    //	{Ime2} {Prezime2}
+    //	.
+    //	.
+    //	.
+    //	{ImeN} {PrezimeN}*/
 
     @Override
     public String toString() {

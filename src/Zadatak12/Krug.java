@@ -26,8 +26,7 @@ public class Krug extends Elipsa {
         StringBuilder sb = new StringBuilder();
         sb.append("Elipsa poluprecnika ").append(r).append(" ima").append("\n");
         sb.append("Obim: ").append(obim()).append("\n");
-        sb.append("Povrsinu: ").append(povrsina()).append("\n");
-        sb.append("Excentricitet: ").append(ekcentricitet());
+        sb.append(ispisPiE());
         return sb.toString();
     }
 }

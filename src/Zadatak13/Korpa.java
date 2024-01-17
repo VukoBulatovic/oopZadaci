@@ -106,8 +106,10 @@ public class Korpa {
 
 
 
+
+
     //pomocna metoda
-    private int brojKopijaNamirnice(Namirnica namirnica) {
+    public int brojKopijaNamirnice(Namirnica namirnica) {
         int br = 0;
         for (Namirnica n : namirnice) {
             if (n.equals(namirnica)) {
@@ -118,7 +120,7 @@ public class Korpa {
     }
 
     //pomocna metoda
-    private double cenaSvihKopijaNamirnice(Namirnica n) {
+    public double cenaSvihKopijaNamirnice(Namirnica n) {
         double ukC = 0;
         for (Namirnica a : namirnice) {
             if (a.equals(n)) {

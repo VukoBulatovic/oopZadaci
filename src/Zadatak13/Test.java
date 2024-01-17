@@ -18,17 +18,11 @@ public class Test {
         osnovneNamirnice.add(brasno);
 
         Prodavnica maxi = new Prodavnica("Maxi",osnovneNamirnice);
-        System.out.println(maxi);
-
         maxi.dodajNamirnicu(tuna);
-        System.out.println(maxi);
-        maxi.ukloniNamirnicu(tuna);
+
         System.out.println(maxi);
 
         System.out.println("==========================");
-
-        Osoba vuko = new Osoba("Vuko","Bulatovic");
-
 
         Korpa korpica = new Korpa();
         korpica.dodajUKorpu(tuna,3);
@@ -37,24 +31,18 @@ public class Test {
         korpica.ukloniIzKorpe(tuna,1);
         System.out.println(korpica);
 
-        /*orpica.dodajUKorpu(mleko,6);
-        System.out.println(korpica);
 
-        korpica.dodajUKorpu(mleko);
-        System.out.println(korpica);
-
-        korpica.ukloniIzKorpe(mleko);
-        System.out.println(korpica);
-
-        korpica.ukloniIzKorpe(mleko,3);
-        System.out.println(korpica);
-
-        System.out.println(korpica.cenaKorpe());
-        korpica.isprazniKorpu();
-        System.out.println(korpica);*/
+        System.out.println("==============================\n");
 
 
+        Kupac marko = new Kupac("Marko","Goranovic",31,22000);
+        marko.dodajUKorpu(jaja,3);
+        marko.dodajUKorpu(mleko,2);
+        marko.dodajUKorpu(tuna);
+        marko.dodajUKorpu(hleb,1);
 
+        marko.kupi();
+        System.out.println(marko);
 
 
 

@@ -23,6 +23,14 @@ public class Test {
 
 
         Profesor pr = new Profesor("Vuko","Bulatovic",30,predmeti);
+        Profesor pr2 = new Profesor("Blagoje","Stanic",28,predmeti);
+        Profesor pr3 = new Profesor("Miloje","Medenica",48,predmeti);
+
+        ArrayList<Profesor> profesori = new ArrayList<>();
+        profesori.add(pr);
+        profesori.add(pr2);
+        profesori.add(pr3);
+
         System.out.println(pr + "\n");
 
         Ucenik u = new Ucenik("Jane","Mercury",32,ocene);
@@ -43,9 +51,10 @@ public class Test {
         System.out.println(o + "\n");
 
         Gimnazijalac g = new Gimnazijalac("Milos","Boskovic",16,ocene,"Nije polozen");
-        System.out.println(g);
+        System.out.println(g + "\n");
 
-
+        Student s = new Student("Marija","Radovic",21,ocene,predmeti,profesori);
+        System.out.println(s);
 
 
 

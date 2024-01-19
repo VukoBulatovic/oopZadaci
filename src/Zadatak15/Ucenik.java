@@ -10,12 +10,12 @@ public class Ucenik extends Osoba {
         this.ocene = ocene;
         for (Double a : this.ocene) {
             if (a < 1.0 || a > 5.0) {
-                    System.out.println("Ocena mora biti izmedju 1 i 5");
-                    this.ocene = new ArrayList<>();
-                    break;
+                System.out.println("Ocena mora biti izmedju 1 i 5");
+                this.ocene = new ArrayList<>();
+                break;
             }
-         }
         }
+    }
 
 
     public Ucenik() {

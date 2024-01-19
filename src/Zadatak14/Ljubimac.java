@@ -61,7 +61,7 @@ public class Ljubimac {
         this.tezina = tezina;
     }
 
-    //pomocna metoda
+    //pomocna metoda za ispis
     public String letiNeLeti(){
         if(!leti)
             return "ne leti";
@@ -79,7 +79,7 @@ public class Ljubimac {
         sb.append("Tip ljubimca je: ").append(red).append("\n");
         sb.append(ime).append(" ima ").append(brojNogu).append(" nogu").append("\n");
         sb.append(ime).append(" ").append(letiNeLeti()).append("\n");
-        sb.append(ime).append(" je tezak: ").append(tezina);
+        sb.append(ime).append(" je tezak: ").append(tezina).append("\n");
 
         return sb.toString();
     }

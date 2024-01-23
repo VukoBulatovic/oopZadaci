@@ -91,7 +91,8 @@ Napisati sve gettere i settere
 Napisati metode:
 1. dodajPutnika() - koja dodaje jednog putnika u Kamion, pazeci da kamion moze najvise imati 1 putnika.
 2. oduzmiPutnika() - koja oduzima jednog putnika iz Kamiona, pazeci da kamion moze imati najmanje 0 putnika.
-3. dodajPutnika(int n) - koja dodaje n putnika u Kamiona. Ukoliko ne mogu da stanu svih n putnika, onda ih dodati do gornje granice
+3. dodajPutnika(int n) - koja dodaje n putnika u Kamiona. Ukoliko ne mogu da stanu svih n putnika,
+*  onda ih dodati do gornje granice
 4. oduzmiPutnika(int n) - koja oduzima n putnika iz Kamiona. Ukoliko nema n putnika u autu, izbaciti sve putnike iz kamiona.
 5. isprazniKamion() - izbacuje sve putnike im kamiona
 6. napuniKamion() - puni kamion sa 2 putnika

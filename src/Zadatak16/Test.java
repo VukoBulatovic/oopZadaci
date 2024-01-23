@@ -10,13 +10,25 @@ public class Test {
         System.out.println(a + "\n");
 
         Vozilo v1 = new Automobil("131431243","Golf","Kupe",2);
-        System.out.println(v1);
+        System.out.println(v1 + "\n");
 
-        a.dodajPutnika();
+        /*a.dodajPutnika();
         a.isprazniAuto();
         a.napuniAuto();
         a.dodajPutnika();
-        System.out.println(a);
+        System.out.println(a);*/
+
+        Motocikl m = new Motocikl(1);
+        System.out.println(m);
+        m.dodajPutnika();
+        System.out.println(m);
+
+
+
+
+
+
+
 
     }
 }

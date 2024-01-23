@@ -6,10 +6,10 @@ public class Test {
         Vozilo v = new Automobil();
         System.out.println(v + "\n");
 
-        Automobil a = new Automobil("123141","Audi","Karavan",4);
+        Automobil a = new Automobil();
         System.out.println(a + "\n");
 
-        Vozilo v1 = new Automobil("131431243","Golf","Kupe",2);
+        Vozilo v1 = new Automobil();
         System.out.println(v1 + "\n");
 
         /*a.dodajPutnika();
@@ -23,10 +23,12 @@ public class Test {
         m.dodajPutnika();
         System.out.println(m);
 
-
-
-
-
+        Autobus as = new Autobus();
+        System.out.println(as);
+        as.dodajPutnika(99);
+        System.out.println(as);
+        as.setRegistarskiBroj("31231414");
+        System.out.println(as);
 
 
 

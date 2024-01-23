@@ -4,8 +4,7 @@ public class Automobil extends Vozilo {
 
     private int brojPutnika;
 
-    public Automobil(String registarskiBroj, String marka, String tip, int brojPutnika) {
-        super(registarskiBroj, marka, tip);
+    public Automobil(int brojPutnika) {
         this.brojPutnika = brojPutnika;
     }
 

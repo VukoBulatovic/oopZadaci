@@ -57,10 +57,22 @@ public abstract class DomacaZivotinja extends Zivotinja {
 
     @Override
     boolean daLiJeDomaca() {
-        return false;
+        return true;
     }
 
     @Override
     void oglasiSe() {
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Ja sam ").append(getNaziv()).append(" ").append(getIme()).append(" i imam ")
+                .append(getKilaza()).append(" kilograma i imam ").append(getBrojNogu()).append(" noge\n");
+        sb.append("Da li sam domaca zivotinja : ").append(daLiJeDomaca()).append("\n");
+        sb.append("Da li se jedem: ").append(daLiSeJedem());
+        return sb.toString();
+    }
+
+
 }

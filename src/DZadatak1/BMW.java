@@ -1,11 +1,12 @@
 package DZadatak1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BMW extends Automobil {
 
 
-    public BMW(ArrayList<Tocak> listaTockova, int godiste, double cena) {
+    public BMW (List<Tocak> listaTockova, int godiste, double cena) {
         super(listaTockova, godiste, cena);
     }
 
@@ -15,18 +16,16 @@ public class BMW extends Automobil {
     }
 
     @Override
-    public double cenaTockova() {
-        double c = 0;
-        for (Tocak t : getListaTockova()){
-            c = c + t.getCenaTocka();
-        }
-        return c;
-    }
-
-    @Override
     public void zameniTocak() {
-
-
+        List<Tocak> noviTockovi = new ArrayList<>();
+        for (Tocak t : getListaTockova()){
+            if(t.getTrajanjeTocka() > 100){
+                noviTockovi.add(new Tocak(0,t.getCenaTocka()));
+            } else {
+                noviTockovi.add(t);
+            }
+        }
+        setListaTockova(noviTockovi);
     }
 
 

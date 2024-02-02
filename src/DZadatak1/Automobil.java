@@ -1,24 +1,24 @@
 package DZadatak1;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Automobil {
 
-    private ArrayList<Tocak> listaTockova;
+    private List<Tocak> listaTockova;
     private int godiste;
     private double cena;
 
-    public Automobil(ArrayList<Tocak> listaTockova, int godiste, double cena) {
+    public Automobil(List<Tocak> listaTockova, int godiste, double cena) {
         this.listaTockova = listaTockova;
         this.godiste = godiste;
         this.cena = cena;
     }
 
-    public ArrayList<Tocak> getListaTockova() {
+    public List<Tocak> getListaTockova() {
         return listaTockova;
     }
 
-    public void setListaTockova(ArrayList<Tocak> listaTockova) {
+    public void setListaTockova(List<Tocak> listaTockova) {
         this.listaTockova = listaTockova;
     }
 
@@ -38,9 +38,24 @@ public abstract class Automobil {
         this.cena = cena;
     }
 
-   public abstract boolean vratiOstecene(Tocak t);
-   public abstract double cenaTockova();
-   public abstract void zameniTocak();
+    public abstract boolean vratiOstecene(Tocak t);
+    public abstract void zameniTocak();
+
+
+    public double cenaTockova(){
+       double ukupnaCena = 0.0;
+       for (Tocak tocak : getListaTockova()) {
+           if (this instanceof BMW) {
+               ukupnaCena += tocak.getCenaTocka() * 100;
+           } else if (this instanceof Mercedes) {
+               ukupnaCena += tocak.getCenaTocka() * 120;
+           } else if (this instanceof Audi) {
+               ukupnaCena += tocak.getCenaTocka() * 110;
+           }
+       }
+       return ukupnaCena;
+   }
+
 
 
 
